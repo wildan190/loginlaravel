@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
+    <h1><center>Selamat Datang</center></h1>
     <div class="container">
         <div class="col-md-12 mt-5">
             <div class="card">
@@ -17,11 +18,13 @@
                 <div class="card-body">
                     <h5>Selamat datang di halaman dashboard, <strong>{{ Auth::user()->name }}</strong></h5>
                     <a href="{{ route('logout') }}" class="btn btn-danger">Logout</a>
-                    <a href="{{ route('posts.index') }}" class="btn btn-danger">Buka SIAKAD</a>
+                    <a href="{{ route('posts.index') }}" class="btn btn-warning">Buka SIAKAD</a>
                     
                 </div>
             </div>
         </div>
     </div>
+    <br />
+    <h3><marquee>Queen Mary University of London</marquee></h3>
 </body>
 </html>
