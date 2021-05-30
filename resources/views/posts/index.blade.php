@@ -60,5 +60,8 @@
     {!! $posts->links() !!}
 
     <a href="{{ route('logout') }}" class="btn btn-danger">Logout</a>
+
+    
  
 @endsection
+

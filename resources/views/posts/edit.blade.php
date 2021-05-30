@@ -67,9 +67,15 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Tanggal Mulai:</strong>
-                <input type="text" class="form-control" name="tanggal_mulai" placeholder="Tanggal Mulai" />
+                <input type="text" class="date form-control" name="tanggal_mulai" placeholder="Tanggal Mulai" />
             </div>
         </div>
+
+        <script type="text/javascript">
+            $('.date').datepicker({  
+            format: 'mm-dd-yyyy'
+            });  
+        </script>
         
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
               <button type="submit" class="btn btn-primary">Update</button>
