@@ -7,6 +7,8 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="icon" href="{{ asset('public/favico.ico')}}">
+    
+    
 </head>
 <body>
     <h1><center>Selamat Datang</center></h1>
@@ -27,6 +29,8 @@
     </div>
     <br />
     <h3><marquee>Queen Mary University of London</marquee></h3>
+
+
     <!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted">
   <!-- Section: Social media -->
