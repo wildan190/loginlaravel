@@ -7,8 +7,9 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="icon" href="{{ asset('public/favico.ico')}}">
-    
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
 </head>
 <body>
     <h1><center>Selamat Datang</center></h1>
@@ -24,9 +25,67 @@
                     <a href="{{ route('posts.index') }}" class="btn btn-warning">Buka SIAKAD</a>
                     
                 </div>
+                <div class="panel-body" align="center">
+                        <div id="pie_chart" style="width:750px; height:450px;">
+
+                        </div>
+                </div>
             </div>
         </div>
     </div>
+    <script>
+      Highcharts.chart('pie_chart', {
+    chart: {
+        type: 'line'
+    },
+    title: {
+        text: 'Grafik Jumlah Mahasiswa Yang Mengikuti Mata Kuliah'
+    },
+    subtitle: {
+        text: 'Data'
+    },
+    xAxis: {
+        categories: [
+            'Pemrograman Web Enterprise',
+            'Rekayasa Sistem Informasi',
+            'MPSI',
+            'TMPD',
+            'Kewirausahaan',
+            'Komputer Masyarakat',
+            'Statistika & Diskrit',
+            'Algoritma & Data Struktur',
+            'Pemrograman PL/SQL',
+            'Pemrogaman Berorientasi Objek'
+        ],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Rainfall (Jumlah)'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'Sistem Informasi',
+        data: [30, 20, 35, 15, 41,31, 32, 18, 20.0, 24.0]
+
+    }]
+});
+    </script>
     <br />
     <h3><marquee>Queen Mary University of London</marquee></h3>
 
